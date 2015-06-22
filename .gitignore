@@ -17,3 +17,4 @@ vignettes/*.pdf
 # other
 data/
 .Rproj.user
+.Rproj
