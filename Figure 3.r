@@ -39,7 +39,7 @@ grand.mean <- mean(avg.r$mean)
 
 (fig3 = ggplot(avg.r, aes(x=siida, y=mean)) +
   geom_hline(yintercept=district.mean, colour="gray40", linetype=2) +  # plot district mean
-  geom_hline(yintercept=grand.mean,    colour="firebrick2", linetype=2) +  # plot grand mean
+  geom_hline(yintercept=grand.mean,    colour="firebrick2", linetype=3) +  # plot grand mean
   
   geom_pointrange(aes(ymax = mean+se, ymin=mean-se)) +  # standard errors
   geom_point(size=6, shape=21, fill="black") +

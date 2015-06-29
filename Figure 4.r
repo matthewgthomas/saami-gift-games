@@ -28,6 +28,7 @@
 ## 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 ##
 require(ggplot2)
+require(wesanderson)
 source("data-funcs/import data.r")
 source("multiplot.r")
 
@@ -39,8 +40,8 @@ age_diffs_nonkin <- subset(herders.wide, GiftGiven==1 & r==0, select=c(AgeDiff))
 plot_age_diffs <- function(age_diffs, title="")
 {
   fig <- ggplot(age_diffs, aes(x=AgeDiff)) + 
-    geom_histogram(data=subset(age_diffs, AgeDiff < 0, select=c(AgeDiff)), fill="#2F4C63", binwidth=5) +
-    geom_histogram(data=subset(age_diffs, AgeDiff > 0, select=c(AgeDiff)), fill="#9A7543", binwidth=5) +
+    geom_histogram(data=subset(age_diffs, AgeDiff < 0, select=c(AgeDiff)), fill=wes_palette("Chevalier")[1], binwidth=5) +  # old colour: "#2F4C63"
+    geom_histogram(data=subset(age_diffs, AgeDiff > 0, select=c(AgeDiff)), fill=wes_palette("Chevalier")[2], binwidth=5) +  # old colour: "#9A7543"
     #geom_histogram(data=subset(age_diffs, AgeDiff == 0, select=c(AgeDiff)), fill="green", alpha=0.2, binwidth=5) +
     # (there are no gifts given to people of the same age)
     
@@ -72,8 +73,8 @@ plot_age_diffs <- function(age_diffs, title="")
 
 
 plots = list()
-plots[[1]] <- plot_age_diffs(age_diffs_kin, title="A")
-plots[[2]] <- plot_age_diffs(age_diffs_nonkin, title="B")
+plots[[1]] <- plot_age_diffs(age_diffs_kin, title="(a)")
+plots[[2]] <- plot_age_diffs(age_diffs_nonkin, title="(b)")
 
 #pdf("fig4.pdf", height=2, width=7)
 postscript("fig4.eps", height=2, width=7)
