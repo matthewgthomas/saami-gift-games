@@ -1,8 +1,8 @@
-# Analysis code for Thomas et al.: "Saami reindeer herders cooperate with social group members and genetic kin" [![license GNU](http://b.repl.ca/v1/license-GNU-brightgreen.png)][license]
+# Analysis code for Thomas et al. (2015): "Saami reindeer herders cooperate with social group members and genetic kin" [![license GNU](http://b.repl.ca/v1/license-GNU-brightgreen.png)][license]
 
 [license]: https://github.com/matthewgthomas/saami-gift-games/blob/master/LICENSE
 
-This repository contains the analysis code, written in R, for our paper "Saami reindeer herders cooperate with social group members and genetic kin" (forthcoming in Behavioral Ecology). The R code is released under a GNU General Public License.
+This repository contains the analysis code, written in R, for our paper "Saami reindeer herders cooperate with social group members and genetic kin" (published in Behavioral Ecology). The R code is released under a GNU General Public License.
 Before running, [download the data files](http://dryad.com) and unzip them into a 'data' subfolder.
 
 ## Main files
