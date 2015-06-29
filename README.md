@@ -2,6 +2,8 @@
 
 [license]: https://github.com/matthewgthomas/saami-gift-games/blob/master/LICENSE
 
+[![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.19101.svg)](http://dx.doi.org/10.5281/zenodo.19101)
+
 This repository contains the analysis code, written in R, for our paper "Saami reindeer herders cooperate with social group members and genetic kin" (published in Behavioral Ecology). The R code is released under a GNU General Public License.
 Before running, [download the data files](http://dryad.com) and unzip them into a 'data' subfolder.
 
